@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+
+@layer base {
+  * {
+    font-family: "Montserrat", sans-serif;
+    /* background-color: #121212; */
+    color: #E0E0E0;
+  }
+
+  body{
+    background-color: #121212;
+  }
+
+  .limited-text {
+    overflow: hidden;
+    display: -webkit-box; /* Required for -webkit-line-clamp */
+    -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    line-clamp: 3; /* Standard property for modern browsers */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-style::-webkit-scrollbar{
+    scrollbar-color: rgb(60, 59, 59) rgb(25, 25, 24);
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-style {
+    scrollbar-color: rgb(60, 59, 59) rgb(25, 25, 24);
+    scrollbar-width: thin;
+  }
+
+
+  /* Animation */
+  @keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+}
+
+@theme {
+  --color-dark-500: #121212;
+  --color-dark-400: #1E1E1E;
+
+  --color-white-500: #E0E0E0;
+  --color-white-grey: #EFEFEF;
+
+
+
+}
