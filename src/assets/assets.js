@@ -1,10 +1,13 @@
 import goi_logo from './goi-logo-1.svg'
 import gct_logo from './gct.png'
+import rshs_logo from './RSHS.png'
+import lis_logo from './LIS.jpg'
 import apicto from './apicto1.png'
 import github_mark from './github-mark.svg'
 import github_mark_white from './github-mark-white.svg'
 import instagram_white from './Instagram_Glyph_White.svg'
 import facebook_white from './Facebook_Logo_Secondary.png'
+import jeg_pfp  from './jeg-picture.jpg'
 
 
 import python from './python.svg'
@@ -18,11 +21,14 @@ import tailwind_logo from './Tailwind-CSS.svg'
 export const assets = {
   goi_logo,
   gct_logo,
+  rshs_logo,
+  lis_logo,
   apicto,
   github_mark,
   github_mark_white,
   facebook_white,
-  instagram_white
+  instagram_white,
+  jeg_pfp
 
 }
 

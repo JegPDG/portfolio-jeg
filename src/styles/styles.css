@@ -48,6 +48,31 @@
 
 
   /* Animation */
+  .linear-wipe{
+    background: #808080;
+    background: linear-gradient(90deg,rgba(128, 128, 128, 0) 0%, rgba(130, 130, 130, 1) 16%, rgba(224, 224, 224, 1) 30%, rgba(135, 130, 130, 1) 43%, rgba(89, 89, 89, 1) 50%, rgba(135, 135, 135, 1) 59%, rgba(217, 217, 217, 1) 75%, rgba(163, 163, 163, 0.11) 89%);
+    color: #000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 1s linear infinite;
+
+    animation: shine 1s linear infinite;
+
+  }
+  @-webkit-keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
   .fade-in-left {
   animation: fadeInLeft 0.6s ease-out forwards;
   }
@@ -74,9 +99,23 @@
     transform: translateX(50px);
   }
 
+  .slide-up {
+    animation: slideUp 1s ease-out forwards;
+  }
+
+  .slide-up-hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
   /* Keyframes  */
   @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideUp {
+  0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
   }
 
