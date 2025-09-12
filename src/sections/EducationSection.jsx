@@ -189,7 +189,7 @@ const EducationSection = () => {
                 <div className='w-full flex flex-col bg-white-grey relative mt-4'>
 
                   <div className='mb-12 p-2'>
-                    <div className='flex gap-4 p-4  hover:bg-dark-400/10 '>
+                    <div className='flex gap-4 p-4 '>
                       <img className='size-12 rounded-[50%]' src={assets.gct_logo} alt="" />
                       <div>
                         <p className='text-dark-400 font-bold text-lg'>Garcia College of Technology</p>
@@ -215,7 +215,7 @@ const EducationSection = () => {
                           </div>
                         </div>
                         
-                        <div className={`flex gap-4 p-4 hover:bg-dark-400/10 
+                        <div className={`flex gap-4 p-4  
                             transform transition-all duration-300 ease-out
                             ${educOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
                           `}
@@ -246,7 +246,7 @@ const EducationSection = () => {
                           </div>
                         </div>
 
-                        <div className={`flex gap-4 p-4 hover:bg-dark-400/10 
+                        <div className={`flex gap-4 p-4
                             ${educOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
                           `}
                           style={{

@@ -43,7 +43,7 @@ const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedItems, setAnimatedItems] = useState(new Set())
   const containerRef = useRef();
-
+  //For animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
 import Home from './pages/Home'
 import MainLayout from './layout/MainLayout';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route element={<MainLayout></MainLayout>}>
             <Route path='/' element={<Home></Home>}></Route>
-          
+            <Route path='/project/name' element={<ProjectDetail></ProjectDetail>}></Route>
           </Route>
         </Routes>
       </Router>

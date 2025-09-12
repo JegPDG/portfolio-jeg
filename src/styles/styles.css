@@ -48,30 +48,48 @@
 
 
   /* Animation */
-  .linear-wipe{
-    background: #808080;
-    background: linear-gradient(90deg,rgba(128, 128, 128, 0) 0%, rgba(130, 130, 130, 1) 16%, rgba(224, 224, 224, 1) 30%, rgba(135, 130, 130, 1) 43%, rgba(89, 89, 89, 1) 50%, rgba(135, 135, 135, 1) 59%, rgba(217, 217, 217, 1) 75%, rgba(163, 163, 163, 0.11) 89%);
-    color: #000;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: shine 1s linear infinite;
-
-    animation: shine 1s linear infinite;
-
-  }
-  @-webkit-keyframes shine {
-    to {
-      background-position: 200% center;
+    .steel-metallic {
+      background: 
+        /* Highlight sweep */
+        linear-gradient(
+          105deg,
+          transparent 40%,
+          rgba(255, 255, 255, 0.3) 47%,
+          rgba(255, 255, 255, 0.9) 50%,
+          rgba(255, 255, 255, 0.3) 53%,
+          transparent 60%
+        ),
+        /* Base metallic gradient */
+        radial-gradient(
+          ellipse at center,
+          #9a9a9a 0%,
+          #7a7a7a 25%,
+          #5a5a5a 50%,
+          #7a7a7a 75%,
+          #9a9a9a 100%
+        );
+      
+      background-size: 250% 100%, 100% 100%;
+      background-position: -150% 0, 0 0;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      animation: steel-shine 3s ease-in-out infinite;
     }
-  }
 
-  @keyframes shine {
-    to {
-      background-position: 200% center;
+  @keyframes steel-shine {
+    0% {
+      background-position: -150% 0, 0 0;
     }
-  }
+    50% {
+      background-position: 150% 0, 0 0;
+    }
+    100% {
+      background-position: -150% 0, 0 0;
+    }
+  } 
 
   .fade-in-left {
   animation: fadeInLeft 0.6s ease-out forwards;
