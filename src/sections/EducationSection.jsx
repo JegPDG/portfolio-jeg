@@ -180,7 +180,7 @@ const EducationSection = () => {
               {/* Education section  */}
               <div 
                 ref={setRef('education')}
-                className={`${visibleItems.education ? 'slide-in-left': 'slide-in-left-hidden'} mt-8 `}>
+                className={`${visibleItems.education ? 'slide-in-right': 'slide-in-right-hidden'} mt-8 `}>
                 <div className='flex gap-2 items-center' >
                   <AcademicCapIcon className='size-12' fill='#4B4B4B'></AcademicCapIcon>
                   <p className='text-5xl font-bold text-dark-400'>education</p>

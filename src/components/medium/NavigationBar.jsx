@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../../assets/assets'
+import ContactModal from './ContactModal';
 
 const NavigationBar = () => {
+  const [isOpenContact, setOpenContact] = useState(false);
+
+
+  
   const placeholder = [
-    {label: "About",      },
-    {label: "Home", },
-    {label: "Contact"}
+    {label: "About", func: () => console.log('you clicked about') },
+    // {label: "Home", },
+    {label: "Contact", func: () => setOpenContact(true)}
   ]
 
 
@@ -25,12 +30,20 @@ const NavigationBar = () => {
               {placeholder.map((element, index) =>
                 <li 
                   className='pl-4 pr-4 pt-2 pb-2 rounded-xl hover:bg-white/10 cursor-pointer'
-                  key={index}>
+                  key={index}
+                  onClick={element.func}
+                  >
                   {element.label}
                 </li>
               )}
             </ul>
           </div>
+
+          {/* Modal  */}
+          <ContactModal
+            isOpenContact={isOpenContact}
+            onClose={() => setOpenContact(false)}
+          ></ContactModal>
 
 
         </div>

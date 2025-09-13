@@ -6,7 +6,9 @@ import apicto from './apicto1.png'
 import github_mark from './github-mark.svg'
 import github_mark_white from './github-mark-white.svg'
 import instagram_white from './Instagram_Glyph_White.svg'
-import facebook_white from './Facebook_Logo_Secondary.png'
+import instagram_black from './instagram_black.svg'
+import facebook_white from './facebook_white.svg'
+import facebook_black from './facebook_black.svg'
 import jeg_pfp  from './jeg-picture.jpg'
 
 
@@ -28,7 +30,9 @@ export const assets = {
   github_mark_white,
   facebook_white,
   instagram_white,
-  jeg_pfp
+  jeg_pfp,
+  facebook_black,
+  instagram_black
 
 }
 

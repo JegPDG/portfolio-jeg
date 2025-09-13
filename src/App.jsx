@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import Home from './pages/Home'
 import MainLayout from './layout/MainLayout';
 import ProjectDetail from './pages/ProjectDetail';
+import ContactModal from './components/medium/ContactModal';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route element={<MainLayout></MainLayout>}>
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/project/name' element={<ProjectDetail></ProjectDetail>}></Route>
+            <Route path='/testmodal' element={<ContactModal></ContactModal>}></Route>
           </Route>
         </Routes>
       </Router>
