@@ -1,24 +1,44 @@
 import React from 'react'
 import { techStack } from '../assets/assets'
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { ArrowTrendingUpIcon, ArrowUpRightIcon, FlagIcon, QueueListIcon } from '@heroicons/react/24/solid'
 
-const ProjectDetail = () => {
+const ProjectDetail = ({project}) => {
+
+  console.log(project)
+
   return (
     <div className=''>
       <div className='w-full max-w-5xl m-auto p-4'>
         <div className='flex items-center gap-4'>
-          <p className='text-4xl font-bold'>Project Name</p>
+          <p className='text-4xl font-bold'>{project.projTitle}</p>
           <ArrowUpRightIcon className='size-6'></ArrowUpRightIcon>
         </div>
-        <p>The project description, the overview of the whole project or the gist of it. Oh yeah</p>
+        <p>{project.projDescription}</p>
 
         {/* the video and image section  */}
         <div className='w-full'>
           <div className='mt-8 w-full bg-dark-400 grid grid-cols-6 gap-2'>
-              <div className='col-span-4 aspect-video w-full bg-amber-300'>
 
+              {/* Video container  */}
+              <div className='col-span-4 aspect-video w-full bg-amber-300'>
+                <img className='w-full h-full object-cover' src={project.video} alt="" />
               </div>
+
+              {/* image containers  */}
+              
+
+
               <div className='col-span-2 w-full '>
+                <ul className='aspect-video flex gap-1 flex-col'>
+                  {project.images.slice(0,2).map((image, index) =>
+                    <li className='aspect-video bg-amber-300'
+                      key={index}
+                      >
+                        <img className='w-full h-full object-cover' src={image.image} alt="" />
+                    </li>
+                  )}
+                </ul>
+                {/* 
                 <div className=' aspect-video flex gap-1 flex-col'>
                   <div className='aspect-video bg-amber-300'>
 
@@ -26,7 +46,7 @@ const ProjectDetail = () => {
                   <div className='aspect-video bg-amber-300'>
 
                   </div>
-                </div>
+                </div> */}
 
               </div>
           </div>
@@ -36,37 +56,73 @@ const ProjectDetail = () => {
         <div className='w-full'>
           <div className='mt-8 w-full grid grid-cols-6 gap-2'>
             <div className='col-span-4  bg-dark-400 p-4'>
-
+              
+              {/* Feature  */}
               <div className='mb-6'>
                 {/* the heading  */}
-                <h1 className='text-2xl font-bold'>Feature</h1>
-                <div>
-                  <p>Menu - showcases the shops various products such as coffees, pastries, cakes, pizza, etc. </p>
-                  <p>Responsive design - Works seamlessly on mobile, tablet, and desktop.</p>
-                  <p>Contacts - list of contacts and contact form for inquiries and reservations </p>
+                <h1 className='text-2xl font-bold flex items-center gap-2'>
+                  <span>
+                    <QueueListIcon className='size-6' fill='#E9C822'></QueueListIcon>
+                  </span>
+
+                   Feature</h1>
+                <div className='pl-6'>
+                  <ul>
+                    {project.features.map((feat, index) =>
+                      <li key={index}>
+                        <p>{feat.feature}</p>
+                      </li>
+                    )}
+                    
+                  </ul>
+
                 </div>
               </div>
 
+              {/* Future Improvements  */}
               <div className='mb-6'>
                 {/* the heading  */}
-                <h1 className='text-2xl font-bold'>Future Improvements</h1>
-                <div>
-                  <p>Menu - showcases the shops various products such as coffees, pastries, cakes, pizza, etc. </p>
-                  <p>Responsive design - Works seamlessly on mobile, tablet, and desktop.</p>
-                  <p>Contacts - list of contacts and contact form for inquiries and reservations </p>
+                <h1 className='text-2xl font-bold flex items-center gap-2'>
+                  <span>
+                    <ArrowTrendingUpIcon className='size-6' fill='#223CE9'></ArrowTrendingUpIcon>
+                  </span>
+
+                   Future Improvements</h1>
+                <div className='pl-6'>
+                  <ul>
+                    {project.improvements.map((improvement, index) =>
+                      <li key={index}>
+                        <p>{improvement.improve}</p>
+                      </li>
+                    )}
+                    
+                  </ul>
+
                 </div>
               </div>
 
+              {/* VHallenges and Learnings  */}
               <div className='mb-6'>
                 {/* the heading  */}
-                <h1 className='text-2xl font-bold'>Challenges and Learning</h1>
-                <div>
-                  <p>Menu - showcases the shops various products such as coffees, pastries, cakes, pizza, etc. </p>
-                  <p>Responsive design - Works seamlessly on mobile, tablet, and desktop.</p>
-                  <p>Contacts - list of contacts and contact form for inquiries and reservations </p>
+                <h1 className='text-2xl font-bold flex items-center gap-2'>
+                  <span>
+                    <FlagIcon className='size-6' fill='#2FE922'></FlagIcon>
+                  </span>
+
+                   Challenges and Learning</h1>
+                <div className='pl-6'>
+                  <ul>
+                    {project.improvements.map((improvement, index) =>
+                      <li key={index}>
+                        <p>{improvement.improve}</p>
+                      </li>
+                    )}
+                    
+                  </ul>
+
                 </div>
               </div>
-    
+
 
             </div>
 

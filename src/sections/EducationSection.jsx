@@ -63,10 +63,10 @@ const EducationSection = () => {
             {/* Left side  */}
             <div
               ref={setRef('right')}
-              className={`${visibleItems.right ? 'slide-in-left': 'slide-in-left-hidden'} col-span-1`}>
-              <div className='pt-16 w-full flex flex-col items-center slide-in-left'>
+              className={`${visibleItems.right ? 'slide-in-left': 'slide-in-left-hidden'} col-span-1 `}>
+              <div className='pt-16 w-full flex flex-col items-center slide-in-left '>
 
-                <div className='w-full  bg-dark-400'>
+                <div className='w-full  bg-dark-400 border'>
                   <img className='w-full h-full object-cover ' src={assets.jeg_pfp} alt="" />
                 </div>
 
@@ -98,7 +98,7 @@ const EducationSection = () => {
                     <p className='text-5xl font-bold text-dark-400 '> about</p>
                   </div>
 
-                  <div className='w-full flex bg-white-grey p-4 mt-4 gap-4 flex-col' >
+                  <div className='w-full flex bg-white-grey p-4 mt-4 gap-4 flex-col border' >
                     <p className='text-dark-400'>I graduated with a <span className='text-dark-400 font-bold'>Bachelor’s degree in Computer Science</span>  from  <span className='text-dark-400 font-bold'>Garcia College of Technology </span>and aspire to become a <span className='text-dark-400 font-bold'>full-stack developer </span>. While I’m still continuously learning and improving, I am committed to growing my skills and reaching that goal.</p>  
 
                     <p className='text-dark-400'> On the frontend, I have a solid foundation in <span className='text-dark-400 font-bold'>HTML, CSS, and JavaScript </span>, and I’ve worked with modern frameworks like <span className='text-dark-400 font-bold'>React.js and Tailwind CSS</span>. As I advanced, I also explored the <span className='text-dark-400 font-bold'>backend </span>, learning <span className='text-dark-400 font-bold'> </span> and building <span className='text-dark-400 font-bold'>RESTful APIs with Django REST Framework</span>.</p>
@@ -118,7 +118,7 @@ const EducationSection = () => {
                   <p className='text-5xl font-bold text-dark-400'>experience</p>
                 </div>
 
-                <div className='w-full flex bg-white-grey mt-4 gap-4 flex-col relative'>
+                <div className='w-full flex bg-white-grey mt-4 gap-4 flex-col relative border '>
 
                   <div className='mb-12 p-4'> 
                     <div>
@@ -186,7 +186,7 @@ const EducationSection = () => {
                   <p className='text-5xl font-bold text-dark-400'>education</p>
                 </div>
 
-                <div className='w-full flex flex-col bg-white-grey relative mt-4'>
+                <div className='w-full flex flex-col bg-white-grey relative mt-4 border'>
 
                   <div className='mb-12 p-2'>
                     <div className='flex gap-4 p-4 '>
