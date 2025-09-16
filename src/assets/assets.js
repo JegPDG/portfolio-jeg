@@ -10,6 +10,12 @@ import instagram_black from './instagram_black.svg'
 import facebook_white from './facebook_white.svg'
 import facebook_black from './facebook_black.svg'
 import jeg_pfp  from './jeg-picture.jpg'
+import jeg_pfp1 from './jeg-pic1x1.png'
+import memoji1 from './memoji/memoji1.png'
+import memoji2 from './memoji/memoji2.png'
+import memoji3 from './memoji/memoji3.png'
+
+
 
 
 import python from './python.svg'
@@ -31,8 +37,12 @@ export const assets = {
   facebook_white,
   instagram_white,
   jeg_pfp,
+  jeg_pfp1,
   facebook_black,
-  instagram_black
+  instagram_black,
+  memoji1,
+  memoji2,
+  memoji3
 
 }
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { projectImage } from '../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 
 const Projects = () => {
-
+  const navigate = useNavigate();
   // Projects list 
   const projects = [
     {
@@ -74,23 +75,31 @@ const Projects = () => {
     <>
       <div>
         <div
+          id="projects-section"
           ref={containerRef}
           className={isVisible ? 'slide-in-right' : 'slide-in-right-hidden'}
           >
-          <p className='text-6xl font-bold'>projects</p>
+          <p className='text-4xl font-bold'>projects</p>
         </div>
         
         {/* project container  */}
-        <ul className='mt-8 grid grid-cols-2 gap-2'>
+        <ul className='mt-8 grid grid-cols-3 gap-2'>
             {projects.map((project, index) =>
               <li 
-                className={`flex flex-col w-full m-auto gap-4 bg-dark-400 p-4 hover hover:bg-lighter-gray transition-colors duration-300  
+                className={`flex flex-col w-full m-auto gap-4 bg-dark-400 p-2 hover hover:bg-lighter-gray 
+                  cursor-pointer
+                  transition-colors duration-300  
                 ${animatedItems.has(index) ? 'slide-up': 'slide-up-hidden'}  
                   `}
                 style={{transitionDelay: isVisible ? `${index * 100}ms` : '0ms'}}
-                key={index}>
-                  {/* image section  */}
+                key={index}
+                onClick={() => {
+                  navigate(`/project/${index}`);
+                  window.scrollTo(0, 0);
+                }}
+                >
 
+                {/* image section  */}
                 <ul className='grid grid-cols-2 grid-rows-2 gap-1'>
                   {project.images?.map((image, index) =>
                     <li 
@@ -103,9 +112,9 @@ const Projects = () => {
 
                 {/* description section  */}
                 <div className='p-4'>
-                  <p className='text-2xl font-bold'>{project.title}</p>
-                  <p className='italic'>{project.techstacks}</p>
-                  <p className='mt-2'>{project.description}</p>
+                  <p className='text-lg font-bold'>{project.title}</p>
+                  <p className='italic text-sm'>{project.techstacks}</p>
+                  <p className='mt-2 text-xs'>{project.description}</p>
 
                 </div>
 

@@ -46,6 +46,10 @@
     scrollbar-width: thin;
   }
 
+  .gradient-bg{
+    background: #29251e;
+    background: linear-gradient(90deg, rgba(41, 37, 30, 1) 0%, rgba(7, 7, 10, 1) 100%);
+  }
 
   /* Animation */
     .steel-metallic {
@@ -99,6 +103,9 @@
     animation: fadeInRight 1s ease-out forwards;
   }
 
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
   .slide-in-left {
     animation: slideInLeft 1s ease-out forwards;
   }

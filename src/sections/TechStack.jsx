@@ -50,21 +50,21 @@ const TechStack = () => {
         <div 
           ref={containerRef}
           className={isVisible ? 'slide-in-right' : 'slide-in-right-hidden'}>
-          <p className='text-6xl font-bold'>tech stack</p>
+          <p className='text-4xl font-bold'>tech stack / skills</p>
         </div>
 
         <div>
           <ul className='flex p-4 gap-4'>
             {techstack.map((tech, index) =>
               <li
-                className={`p-4 flex flex-col items-center hover:bg-white/10 
+                className={`p-4 flex flex-col w-50 items-center hover:bg-white/10 border border-white/10
                   ${animatedItems.has(index) ? 'slide-in-right': 'slide-in-right-hidden'}
                   `}
                 style={{transitionDelay: isVisible ? `${index * 100}ms` : '0ms'}}
                 key={index}>
                 <img className='size-12' src={tech.image} alt="" />
 
-                <p>{tech.name}</p>
+                <p className='text-xs'>{tech.name}</p>
               </li>
             )}
           </ul>

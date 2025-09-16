@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { assets } from '../../assets/assets'
 import { PhoneIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import emailjs from '@emailjs/browser'
 
 const ContactModal = ({isOpenContact, onClose}) => {
   if (!isOpenContact) return null;
+  const form = useRef()
+
+
+  const sendEmail = (e) => {
+  e.preventDefault();
+  
+  console.log('processing')
+  try{
+  emailjs.sendForm(
+          import.meta.env.VITE_YOUR_SERVICE_ID, 
+          import.meta.env.VITE_YOUR_TEMPLATE_ID, 
+          form.current, 
+          import.meta.env.VITE_YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log('SUCCESS', result)
+        },
+        (error) => {
+          console.log('FAILED', error.text)
+        }
+      )
+  } catch(error){
+    console.log(error)
+  }
+  
+}
 
 
   return (
@@ -21,15 +49,25 @@ const ContactModal = ({isOpenContact, onClose}) => {
 
           {/* Socials Links  */}
           <div className='flex gap-2 mt-2 '>
-            <div className='flex items-center gap-2 p-2 border cursor-pointer hover:bg-dark-400/20'>
-              <img className='size-8 ' src={assets.facebook_black} alt="" />
-              <p className='text-dark-500 font-bold'>Facebook</p>
-            </div>
-
-            <div className='flex items-center gap-2 p-2 border cursor-pointer hover:bg-dark-400/20'>
-              <img className='size-8 ' src={assets.instagram_black} alt="" />
-              <p className='text-dark-500 font-bold'>Instagram</p>
-            </div>
+            <a 
+              href="https://www.facebook.com/jeg.paduga"
+              target='_blank'
+              >
+              <div className='flex items-center gap-2 p-2 border cursor-pointer hover:bg-dark-400/20'>
+                <img className='size-8 ' src={assets.facebook_black} alt="" />
+                <p className='text-dark-500 font-bold'>Facebook</p>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.instagram.com/jegpdg/?igsh=MXdneHQ1azNybWhibA%3D%3D#"
+              target='_blank'
+              >
+              <div className='flex items-center gap-2 p-2 border cursor-pointer hover:bg-dark-400/20'>
+                <img className='size-8 ' src={assets.instagram_black} alt="" />
+                <p className='text-dark-500 font-bold'>Instagram</p>
+              </div>
+            </a>
 
             <div className='flex items-center gap-2 p-2 border cursor-pointer'>
               <PhoneIcon className='size-8 ' fill='#121212'></PhoneIcon>
@@ -41,7 +79,9 @@ const ContactModal = ({isOpenContact, onClose}) => {
           {/* Email links  */}
           <p className='text-dark-500 mt-4'>or email me at <span className='text-dark-500 font-bold'>padugajeg@gmail.com </span></p>
 
-          <form 
+          <form
+            ref={form} 
+            onSubmit={sendEmail}
             className='w-full mt-2 flex flex-col gap-2'
             action="">
             <label className='text-dark-500 ' htmlFor="">
@@ -80,7 +120,9 @@ const ContactModal = ({isOpenContact, onClose}) => {
             </label>
             
             <div className='flex justify-center'>
-              <input className='border w-[84px] p-2 font-bold text-dark-500 cursor-pointer hover:bg-dark-400/20' type="submit" />
+              <input 
+                className='border w-[84px] p-2 font-bold text-dark-500 cursor-pointer hover:bg-dark-400/20' 
+                type="submit" />
             </div>
 
           </form>

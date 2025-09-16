@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { assets } from '../../assets/assets'
 import ContactModal from './ContactModal';
+import { useNavigate } from 'react-router-dom';
 
 const NavigationBar = () => {
   const [isOpenContact, setOpenContact] = useState(false);
+  const navigate = useNavigate();
 
 
   
   const placeholder = [
-    {label: "About", func: () => console.log('you clicked about') },
+    {label: "About", func: () => navigate('/') },
     // {label: "Home", },
     {label: "Contact", func: () => setOpenContact(true)}
   ]

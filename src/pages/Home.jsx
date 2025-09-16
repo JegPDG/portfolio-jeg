@@ -52,12 +52,20 @@ const Home = () => {
 
   ]
 
+  const scrollToProjects = () => {
+  const element = document.getElementById('projects-section');
+  element?.scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
+  });
+  };
+
 
   return (
     <div className='w-full '>
 
       {/* Home landing page  */}
-      <Landing></Landing>
+      <Landing scrollToProjects={scrollToProjects}></Landing>
 
       {/* Other eleemnst */}
       <EducationSection></EducationSection>
