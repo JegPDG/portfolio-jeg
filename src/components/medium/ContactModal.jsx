@@ -127,8 +127,6 @@ const ContactModal = ({isOpenContact, onClose}) => {
 
           </form>
 
-
-
         </div>
       </div>
     </>
