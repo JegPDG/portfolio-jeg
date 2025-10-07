@@ -27,8 +27,13 @@ import javascript from './icons8-javascript.svg'
 import tailwind_logo from './Tailwind-CSS.svg'
 import ai_ml_logo from './ai-ml-logo.png'
 import django_rest from './Django-REST.svg'
-import django_rest_white from './django-rest-white-bg.png'
+import django_rest_white from './django-rest-white-bg.png';
 import vite_logo from './Vitejs-logo.png'
+import jwt_logo from './jwt-logo.png'
+import vercel_logo from './logo-vercel.svg'
+import OAuth_logo from './Oauth_logo.svg.png'
+import render_logo from './render_logo.jpeg'
+import supabase from './supabase-logo-icon.svg'
 
 
 export const assets = {
@@ -62,7 +67,14 @@ export const techStack = {
   ai_ml_logo,
   django_rest,
   django_rest_white,
-  vite_logo
+  vite_logo,
+  github_mark,
+  github_mark_white,
+  jwt_logo,
+  OAuth_logo,
+  vercel_logo,
+  render_logo,
+  supabase
 }
 
 import crampal from './projectImages/crampal.png'

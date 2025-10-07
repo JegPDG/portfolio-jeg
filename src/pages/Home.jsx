@@ -14,7 +14,11 @@ const Home = () => {
     {image: techStack.react_logo, name: "React.js"},
     {image: techStack.python, name: "Python"},
     {image: techStack.django_logo, name: "Django"},
-    {image: techStack.tailwind_logo, name: "Taiwind CSS"}
+    {image: techStack.tailwind_logo, name: "Taiwind CSS"},
+
+    {image: techStack.vite_logo, name: "Vite"}
+
+
   ]
 
   const projects = [

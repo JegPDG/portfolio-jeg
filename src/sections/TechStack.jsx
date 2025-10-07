@@ -7,14 +7,18 @@ const TechStack = () => {
       {image: techStack.css_logo, name: "CSS"},
       {image: techStack.javascript, name: "JavaScript"},
       {image: techStack.react_logo, name: "React.js"},
+      {image: techStack.vite_logo, name: "Vite"},
+      {image: techStack.tailwind_logo, name: "Taiwind CSS"},
       {image: techStack.python, name: "Python"},
       {image: techStack.django_logo, name: "Django"},
-      {image: techStack.tailwind_logo, name: "Taiwind CSS"}
+      {image: techStack.django_rest_white, name: "Django REST Framework"},
+      {image: techStack.github_mark_white, name: "Github"},
+
     ]
 
     const [isVisible, setIsVisible] = useState(false);
     const [animatedItems, setAnimatedItems] = useState(new Set())
-    const containerRef = useRef()
+    const containerRef = useRef() 
     
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -54,17 +58,17 @@ const TechStack = () => {
         </div>
 
         <div>
-          <ul className='flex p-4 gap-4'>
+          <ul className='grid grid-cols-2 mt-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'>
             {techstack.map((tech, index) =>
               <li
-                className={`p-4 flex flex-col w-50 items-center hover:bg-white/10 border border-white/10
+                className={`p-4 flex flex-col w-full h-24 items-center hover:bg-white/10 border border-white/10
                   ${animatedItems.has(index) ? 'slide-in-right': 'slide-in-right-hidden'}
                   `}
                 style={{transitionDelay: isVisible ? `${index * 100}ms` : '0ms'}}
                 key={index}>
-                <img className='size-12' src={tech.image} alt="" />
+                <img className='size-8' src={tech.image} alt="" />
 
-                <p className='text-xs'>{tech.name}</p>
+                <p className='text-xs mt-2 text-center'>{tech.name}</p>
               </li>
             )}
           </ul>

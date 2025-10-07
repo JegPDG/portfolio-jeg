@@ -66,7 +66,7 @@ const Projects = () => {
         <div
           id="projects-section"
           ref={containerRef}
-          className={isVisible ? 'slide-in-right' : 'slide-in-right-hidden'}
+          className={`${isVisible ? 'slide-in-right' : 'slide-in-right-hidden'} mt-4`}
           >
           <p className='text-4xl font-bold'>projects</p>
         </div>
