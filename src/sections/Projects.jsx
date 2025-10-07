@@ -23,21 +23,10 @@ const Projects = () => {
         {photo: projectImage.study_tracker2},
         {photo: projectImage.study_tracker3},
       ],
-      title: "StudBud: A Personalized Study Companion App",
-      techstacks: "React.js, Django, Django REST Framework, PostgreSQL",
+      title: "Bean and Hops: A Coffe Shop Website",
+      techstacks: "React.js, Django, Django REST Framework, Tailwind CSS",
       description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
     },
-    {
-      images: [
-        {photo: projectImage.crampal},
-        {photo: projectImage.crampal1},
-        {photo: projectImage.crampal2},
-      ],
-      title: "StudBud: A Personalized Study Companion App",
-      techstacks: "React.js, Django, Django REST Framework, PostgreSQL",
-      description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
-    },
-
 
   ]
 

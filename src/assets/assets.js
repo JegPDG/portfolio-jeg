@@ -25,6 +25,11 @@ import css_logo from './icons8-css.svg'
 import html_logo from './icons8-html.svg'
 import javascript from './icons8-javascript.svg'
 import tailwind_logo from './Tailwind-CSS.svg'
+import ai_ml_logo from './ai-ml-logo.png'
+import django_rest from './Django-REST.svg'
+import django_rest_white from './django-rest-white-bg.png'
+import vite_logo from './Vitejs-logo.png'
+
 
 export const assets = {
   goi_logo,
@@ -53,7 +58,11 @@ export const techStack = {
   css_logo,
   html_logo,
   javascript,
-  tailwind_logo
+  tailwind_logo,
+  ai_ml_logo,
+  django_rest,
+  django_rest_white,
+  vite_logo
 }
 
 import crampal from './projectImages/crampal.png'
