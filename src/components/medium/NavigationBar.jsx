@@ -18,7 +18,7 @@ const NavigationBar = () => {
 
   return (
     <div className='w-full '>
-      <div className='w-full h-16 border-b-white border-b bg-dark-500'>
+      <div className='w-full h-16 border-b-white/20 border-b bg-dark-500/60'>
         <div className='w-full max-w-5xl h-full m-auto  pr-4 pl-4 box-border pt-2 pb-2 flex items-center justify-between'>
           {/* Right side logo and name */}
           <div 

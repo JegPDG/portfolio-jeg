@@ -4,6 +4,7 @@ import { ArrowTrendingUpIcon, ArrowUpRightIcon, FlagIcon, QueueListIcon } from '
 import { useParams } from 'react-router-dom'
 import ProjectImagesModal from '../components/medium/ProjectImagesModal'
 import { useModal } from '../context/ModalContext'
+import { bnhImages } from '../assets/projectImages/projectimages'
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -49,12 +50,19 @@ const ProjectDetail = () => {
       },
       {
           projTitle: "Bean and Hops: A Coffe Shop Website",
+          projlink: "https://bean-and-hops.vercel.app",
           projDescription: "This is a coffee shop website that showcases its products, services and information.",
-          video: projectImage.crampal3,
+          video: bnhImages.bnh_11,
           images: [
-            {image: projectImage.crampal},
-            {image: projectImage.crampal1},
-            {image: projectImage.crampal2},
+            {image: bnhImages.bnh_1},
+            {image: bnhImages.bnh_2},
+            {image: bnhImages.bnh_3},
+            {image: bnhImages.bnh_4},
+            {image: bnhImages.bnh_5},
+            {image: bnhImages.bnh_6},
+            {image: bnhImages.bnh_7},
+            {image: bnhImages.bnh_8},
+            {image: bnhImages.bnh_9},
           ],
           features: [
             {feature: "Includes an admin dashboard where moderators can dynamically update menu items, add new posts, and manage customer reviews."},
@@ -102,10 +110,12 @@ const ProjectDetail = () => {
   return (
     <div className='relative'>
       <div className='w-full max-w-5xl m-auto p-4 fade-in-up'>
-        <div className='flex items-center gap-4'>
-          <p className='text-4xl font-bold'>{projectItems[id].projTitle}</p>
-          <ArrowUpRightIcon className='size-6'></ArrowUpRightIcon>
-        </div>
+        <a href={projectItems[id].projlink} target='_blank'>
+          <div className='flex items-center gap-4 cursor-pointer'>
+            <p className='text-4xl font-bold'>{projectItems[id].projTitle}</p>
+            <ArrowUpRightIcon className='size-6'></ArrowUpRightIcon>
+          </div>
+        </a>
         <p>{projectItems[id].projDescription}</p>
 
         {/* the video and image section  */}
@@ -129,14 +139,14 @@ const ProjectDetail = () => {
                   {/* first image  */}
                   <div 
                     // onClick={() => setSelectedImage(projectItems[id].images[0].image)}
-                    className='w-full h-full'>
+                    className='w-full h-full overflow-hidden'>
                     <img className='w-full h-full object-cover' src={projectItems[id].images[0].image} alt="" />
                   </div>
 
                   {/* seconf image  */}
                   <div 
                     onClick={() => openModal(projectItems[id].images, 1)}
-                    className='w-full h-full relative cursor-pointer group'>
+                    className='w-full h-full relative cursor-pointer group overflow-hidden'>
                     <div className="absolute inset-0 bg-dark-400/70 opacity-50 group-hover:opacity-100 transition-opacity duration-300 flex  items-center justify-center">
                       <p className='font-bold text-3xl'>+ {projectItems[id].images.length - 2}</p>
                     </div>
