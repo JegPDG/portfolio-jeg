@@ -8,11 +8,13 @@ const NavigationBar = () => {
   const navigate = useNavigate();
 
 
-  
   const placeholder = [
     {label: "About", func: () => navigate('/') },
     // {label: "Home", },
+    {label: "Projects", func: () => navigate('/', { state: { scrollTo: 'projects' } })},
+
     {label: "Contact", func: () => setOpenContact(true)}
+
   ]
 
 
@@ -25,7 +27,7 @@ const NavigationBar = () => {
             onClick={() => navigate('/')}
             className='flex gap-4 items-center cursor-pointer'>
             <img className='size-12' src={assets.goi_logo} alt="" />
-            <p className='text-xl font-bold'>Paduga, JEG</p>
+            <p className='text-xl font-medium'>JEG</p>
           </div>
 
           {/* Left side  */}

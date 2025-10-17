@@ -1,12 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { assets, projectImage, techStack } from '../assets/assets'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
 import EducationSection from '../sections/EducationSection'
 import TechStack from '../sections/TechStack'
 import Projects from '../sections/Projects'
 import Landing from '../sections/Landing'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
+  const location = useLocation()
+
+  const scrollToProjects = () => {
+  const element = document.getElementById('projects-section');
+  element?.scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
+  });
+  };
+  
+  useEffect(() => {
+    if (location.state?.scrollTo === 'projects') {
+      const element = document.getElementById('projects-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [location]);
+
+
   const techstack = [
     {image: techStack.html_logo, name: "HTML"},
     {image: techStack.css_logo, name: "CSS"},
@@ -55,14 +76,6 @@ const Home = () => {
 
 
   ]
-
-  const scrollToProjects = () => {
-  const element = document.getElementById('projects-section');
-  element?.scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start'
-  });
-  };
 
 
   return (

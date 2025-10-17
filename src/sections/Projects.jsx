@@ -1,12 +1,34 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { projectImage } from '../assets/assets';
 import { useNavigate } from 'react-router-dom';
+import { bnhImages, studyTracker } from '../assets/projectImages/projectimages';
 
 
 const Projects = () => {
   const navigate = useNavigate();
   // Projects list 
   const projects = [
+    {
+      images: [
+        {photo: bnhImages.bnh_11},
+        {photo: bnhImages.bnh_1},
+        {photo: bnhImages.bnh_2},
+      ],
+      title: "Bean and Hops: A Coffe Shop Website",
+      techstacks: "React.js, Django, Django REST Framework, Tailwind CSS",
+      description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
+    },
+    {
+      images: [
+        {photo: studyTracker.studytracker_1},
+        {photo: studyTracker.studytracker_2},
+        {photo: studyTracker.studytracker_3},
+
+      ],
+      title: "Bean and Hops: A Coffe Shop Website",
+      techstacks: "React.js, Django, Django REST Framework, Tailwind CSS",
+      description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
+    },
     {
       images: [
         {photo: projectImage.crampal},
@@ -16,16 +38,6 @@ const Projects = () => {
       title: "CramPal: AI Powered Learning Assistant",
       techstacks: "Javascript (React.js), HTML, CSS",
       description: "A frontend web project that uses AI api to generate study materials to summaries, flashcards, and quizzes from uploaded PDF files."
-    },
-    {
-      images: [
-        {photo: projectImage.study_tracker1},
-        {photo: projectImage.study_tracker2},
-        {photo: projectImage.study_tracker3},
-      ],
-      title: "Bean and Hops: A Coffe Shop Website",
-      techstacks: "React.js, Django, Django REST Framework, Tailwind CSS",
-      description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
     },
 
   ]
@@ -72,7 +84,7 @@ const Projects = () => {
         </div>
         
         {/* project container  */}
-        <ul className='mt-8 grid grid-cols-3 gap-2'>
+        <ul className='mt-8 grid grid-cols-2 gap-2'>
             {projects.map((project, index) =>
               <li 
                 className={`flex flex-col w-full m-auto gap-4 bg-dark-400 p-2 hover hover:bg-lighter-gray 
@@ -92,9 +104,9 @@ const Projects = () => {
                 <ul className='grid grid-cols-2 grid-rows-2 gap-1'>
                   {project.images?.map((image, index) =>
                     <li 
-                      className='first:row-span-2'
+                      className='first:row-span-2 '
                       key={index}>
-                        <img className='w-full h-full object-cover' src={image.photo} alt="" /> 
+                        <img className='w-full h-full object-cover aspect-video' src={image.photo} alt="" /> 
                     </li>
                   )}
                 </ul>

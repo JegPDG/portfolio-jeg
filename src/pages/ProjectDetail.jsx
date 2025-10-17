@@ -4,7 +4,7 @@ import { ArrowTrendingUpIcon, ArrowUpRightIcon, FlagIcon, QueueListIcon } from '
 import { useParams } from 'react-router-dom'
 import ProjectImagesModal from '../components/medium/ProjectImagesModal'
 import { useModal } from '../context/ModalContext'
-import { bnhImages } from '../assets/projectImages/projectimages'
+import { bnhImages, studyTracker } from '../assets/projectImages/projectimages'
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -14,9 +14,113 @@ const ProjectDetail = () => {
 
   const projectItems = [
     {
+      projTitle: "Bean and Hops: A Coffe Shop Website",
+      projlink: "https://bean-and-hops.vercel.app",
+      projDescription: "This is a coffee shop website that showcases its products, services and information.",
+      video: bnhImages.bnh_11,
+      images: [
+        {image: bnhImages.bnh_1},
+        {image: bnhImages.bnh_2},
+        {image: bnhImages.bnh_3},
+        {image: bnhImages.bnh_4},
+        {image: bnhImages.bnh_5},
+        {image: bnhImages.bnh_6},
+        {image: bnhImages.bnh_7},
+        {image: bnhImages.bnh_8},
+        {image: bnhImages.bnh_9},
+      ],
+      features: [
+        {feature: "Includes an admin dashboard where moderators can dynamically update menu items, add new posts, and manage customer reviews."},
+        {feature: "Features a customer review system allowing users to leave feedback and reply to other reviews for better community engagement."},
+        {feature: "Implements Google OAuth authentication, ensuring that only verified Google users can leave reviews — maintaining authenticity and credibility."},
+        {feature: "Provides a  Contact Page that lists multiple communication channels including social media links, phone number, and an integrated email sender."},
+        {feature: "Integrates Google Maps API to display the café’s exact location for easy navigation."},
+        {feature: "Built with a fully responsive design, optimized for mobile, tablet, and desktop devices to ensure a seamless user experience."},
+        {feature: "Offers a visually appealing menu showcase with categories for beverages, pastries, and signature dishes."},
+
+
+      ],
+      improvements: [
+        {improve: "Enhance the Location Page with route suggestions and nearby landmarks using advanced Google Maps features."},
+        {improve: "Add an online ordering and reservation system for customers to place orders or book tables directly through the website."},
+        {improve: "Implement user accounts for saving favorite menu items and tracking reviews."},
+        {improve: "Refine UI animations and transitions for smoother navigation and a more polished look."},
+
+      ],
+      challenges: [
+        {challenge: "Configuring and integrating Google OAuth with Django for secure login and authentication."},
+        {challenge: "Implementing a dynamic admin panel that allows real-time content updates without page reloads."},
+        {challenge: "Ensuring responsive design consistency across multiple screen sizes and devices."},
+
+
+
+      ],
+      technologies: [
+        {tech: "React.js", icon: techStack.react_logo},
+        {tech: "Vite", icon: techStack.vite_logo},
+        {tech: "Tailwind CSS", icon: techStack.tailwind_logo},
+        {tech: "Django", icon: techStack.django_logo},
+        {tech: "Django-REST Framework", icon: techStack.django_rest_white},
+
+        {tech: "JWT", icon: techStack.jwt_logo},
+        {tech: "Google OAuth", icon: techStack.OAuth_logo},
+        {tech: "Supabase", icon: techStack.supabase},
+        {tech: "Render", icon: techStack.render_logo},
+        {tech: "Vercel", icon: techStack.vercel_logo},
+      ]
+  
+    },
+    {
+      projTitle: "StudBud: AI-Powered Study Companion",
+      projlink: "https://bean-and-hops.vercel.app",
+      projDescription: "StudBud is a smart notes application designed to help students organize their study materials efficiently. It allows users to create subjects, take detailed notes, and leverage AI to summarize, quiz, and reinforce learning. The goal is to make studying more interactive, personalized, and effective.",
+      video: studyTracker.studytracker_1,
+      images: [
+        {image: studyTracker.studytracker_2},
+        {image: studyTracker.studytracker_3},
+        {image: studyTracker.studytracker_4},
+        {image: studyTracker.studytracker_5},
+        {image: studyTracker.studytracker_6},
+      ],
+      features: [
+        { feature: "Organize notes under specific subjects for structured studying" },
+        { feature: "AI assistant that helps summarize notes and explain difficult topics" },
+        { feature: "Automatic flashcard generation based on your notes" },
+        { feature: "Quiz generation to test your knowledge and retention" },
+        { feature: "User authentication and personalized dashboard" },
+
+      ],
+      improvements: [
+        { improve: "Integrate flashcard functionality for interactive reviewing" },
+        { improve: "Allow users to download or print flashcards for offline studying" },
+        { improve: "Enhance AI assistant capabilities for more accurate summarization" },
+        { improve: "Add customization for note and subject colors or themes" },
+        { improve: "Support file uploads (PDFs, Word docs) and convert them into editable notes" },
+        { improve: "Develop a dedicated quiz generation and results page" },
+        { improve: "Implement cloud sync and offline mode for accessibility" },
+      ],
+      challenges: [
+        { challenge: "Designing smooth communication between the Django backend and React frontend" },
+        { challenge: "Managing state and data flow efficiently when generating AI responses" },
+        { challenge: "Optimizing performance for AI-related features without slowing down user experience" },
+      ],
+      technologies: [
+        {tech: "React.js", icon: techStack.react_logo},
+        {tech: "Vite", icon: techStack.vite_logo},
+        {tech: "Tailwind CSS", icon: techStack.tailwind_logo},
+        {tech: "Django", icon: techStack.django_logo},
+        {tech: "Django-REST Framework", icon: techStack.django_rest_white},
+
+        {tech: "JWT", icon: techStack.jwt_logo},
+        {tech: "Supabase", icon: techStack.supabase},
+        {tech: "Render", icon: techStack.render_logo},
+        {tech: "Vercel", icon: techStack.vercel_logo},
+      ]
+    },
+    {
         projTitle: "Crampal: An AI Powered Learning Assistant",
         projLink: "",
-        projDescription: "A frontend web project that uses AI api to generate study materials to summaries, flashcards, and quizzes from uploaded PDF files. It is small school project that intigrates AI",
+        projDescription: "Crampal is a frontend web application that leverages artificial intelligence to transform uploaded study materials into summaries, flashcards, and quizzes. Designed as a small school project, it demonstrates how AI can automate learning aid creation from PDF files, making studying faster and more engaging.",
         video: projectImage.crampal3,
         images: [
           {image: projectImage.crampal},
@@ -24,18 +128,22 @@ const ProjectDetail = () => {
           {image: projectImage.crampal2},
         ],
         features: [
-          {feature: "Utilizes AI APIs to automatically generate flashcards, quizzes, and summaries"},
-          {feature: "Supports PDF uploads and intelligently extracts text and key information"},
+          { feature: "AI integration for automatic generation of summaries, flashcards, and quizzes" },
+          { feature: "PDF upload functionality with intelligent text extraction and key concept identification" },
+          { feature: "Clean, responsive frontend interface optimized for readability and usability" },
+          { feature: "Dynamic display of generated study materials in a user-friendly layout" },
         ],
         improvements: [
-          {improve: "Enable user accounts for saving and organizing study materials"},
-          {improve: "Enhance the UI/UX for a smoother and more modern experience"},
-          {improve: "Add support for additional file types beyond PDF"},
-    
+          { improve: "Add user authentication and personalized dashboards for saving study sessions" },
+          { improve: "Enhance UI/UX with modern animations and dark mode support" },
+          { improve: "Expand compatibility to include Word documents and text files" },
+          { improve: "Integrate a backend for persistent data storage and history tracking" },
         ],
         challenges: [
-          {challenge: "Implemented PDF text extraction and preprocessing"},
-          {challenge: "Gained hands-on experience in integrating AI into web applications"},
+          { challenge: "Implementing accurate PDF text extraction and preprocessing for clean AI input" },
+          { challenge: "Managing API integration and prompt engineering for consistent AI outputs" },
+          { challenge: "Designing a responsive and intuitive interface for displaying AI-generated content" },
+          { challenge: "Balancing performance and API rate limits during rapid content generation" },
         ],
         technologies: [
           {tech: "CSS", icon: techStack.css_logo},
@@ -43,68 +151,9 @@ const ProjectDetail = () => {
           {tech: "React.js", icon: techStack.react_logo},
           {tech: "AI/ML API", icon: techStack.ai_ml_logo},
           {tech: "Vite", icon: techStack.vite_logo},
-
-
         ]
     
       },
-      {
-          projTitle: "Bean and Hops: A Coffe Shop Website",
-          projlink: "https://bean-and-hops.vercel.app",
-          projDescription: "This is a coffee shop website that showcases its products, services and information.",
-          video: bnhImages.bnh_11,
-          images: [
-            {image: bnhImages.bnh_1},
-            {image: bnhImages.bnh_2},
-            {image: bnhImages.bnh_3},
-            {image: bnhImages.bnh_4},
-            {image: bnhImages.bnh_5},
-            {image: bnhImages.bnh_6},
-            {image: bnhImages.bnh_7},
-            {image: bnhImages.bnh_8},
-            {image: bnhImages.bnh_9},
-          ],
-          features: [
-            {feature: "Includes an admin dashboard where moderators can dynamically update menu items, add new posts, and manage customer reviews."},
-            {feature: "Features a customer review system allowing users to leave feedback and reply to other reviews for better community engagement."},
-            {feature: "Implements Google OAuth authentication, ensuring that only verified Google users can leave reviews — maintaining authenticity and credibility."},
-            {feature: "Provides a  Contact Page that lists multiple communication channels including social media links, phone number, and an integrated email sender."},
-            {feature: "Integrates Google Maps API to display the café’s exact location for easy navigation."},
-            {feature: "Built with a fully responsive design, optimized for mobile, tablet, and desktop devices to ensure a seamless user experience."},
-            {feature: "Offers a visually appealing menu showcase with categories for beverages, pastries, and signature dishes."},
-
-
-          ],
-          improvements: [
-            {improve: "Enhance the Location Page with route suggestions and nearby landmarks using advanced Google Maps features."},
-            {improve: "Add an online ordering and reservation system for customers to place orders or book tables directly through the website."},
-            {improve: "Implement user accounts for saving favorite menu items and tracking reviews."},
-            {improve: "Refine UI animations and transitions for smoother navigation and a more polished look."},
-
-          ],
-          challenges: [
-            {challenge: "Configuring and integrating Google OAuth with Django for secure login and authentication."},
-            {challenge: "Implementing a dynamic admin panel that allows real-time content updates without page reloads."},
-            {challenge: "Ensuring responsive design consistency across multiple screen sizes and devices."},
-
-
-
-          ],
-          technologies: [
-            {tech: "React.js", icon: techStack.react_logo},
-            {tech: "Vite", icon: techStack.vite_logo},
-            {tech: "Tailwind CSS", icon: techStack.tailwind_logo},
-            {tech: "Django", icon: techStack.django_logo},
-            {tech: "Django-REST Framework", icon: techStack.django_rest_white},
-
-            {tech: "JWT", icon: techStack.jwt_logo},
-            {tech: "Google OAuth", icon: techStack.OAuth_logo},
-            {tech: "Supabase", icon: techStack.supabase},
-            {tech: "Render", icon: techStack.render_logo},
-            {tech: "Vercel", icon: techStack.vercel_logo},
-          ]
-      
-        }
   ]
 
   return (
