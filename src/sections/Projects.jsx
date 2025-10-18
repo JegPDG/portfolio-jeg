@@ -16,7 +16,7 @@ const Projects = () => {
       ],
       title: "Bean and Hops: A Coffe Shop Website",
       techstacks: "React.js, Django, Django REST Framework, Tailwind CSS",
-      description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
+      description: "This is a coffee shop website that showcases its products, services and information."
     },
     {
       images: [
@@ -84,12 +84,12 @@ const Projects = () => {
         </div>
         
         {/* project container  */}
-        <ul className='mt-8 grid grid-cols-2 gap-2'>
+        <ul className='mt-8 grid grid-cols-2 gap-4'>
             {projects.map((project, index) =>
               <li 
-                className={`flex flex-col w-full m-auto gap-4 bg-dark-400 p-2 hover hover:bg-lighter-gray 
+                className={`flex flex-col w-full m-auto gap-4 bg-white p-2 hover:bg-white-grey box-shadow-anim-2
                   cursor-pointer
-                  transition-colors duration-300  
+                  transition-colors duration-300
                 ${animatedItems.has(index) ? 'slide-up': 'slide-up-hidden'}  
                   `}
                 style={{transitionDelay: isVisible ? `${index * 100}ms` : '0ms'}}
@@ -104,7 +104,7 @@ const Projects = () => {
                 <ul className='grid grid-cols-2 grid-rows-2 gap-1'>
                   {project.images?.map((image, index) =>
                     <li 
-                      className='first:row-span-2 '
+                      className='first:row-span-2 border-1 border-dark-400/60'
                       key={index}>
                         <img className='w-full h-full object-cover aspect-video' src={image.photo} alt="" /> 
                     </li>
@@ -113,9 +113,9 @@ const Projects = () => {
 
                 {/* description section  */}
                 <div className='p-4'>
-                  <p className='text-lg font-bold'>{project.title}</p>
-                  <p className='italic text-sm'>{project.techstacks}</p>
-                  <p className='mt-2 text-xs'>{project.description}</p>
+                  <p className='text-lg font-bold text-dark-500'>{project.title}</p>
+                  <p className='italic text-sm text-dark-500'>{project.techstacks}</p>
+                  <p className='mt-2 text-xs text-dark-500'>{project.description}</p>
 
                 </div>
 

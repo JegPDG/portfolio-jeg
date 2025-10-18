@@ -35,7 +35,7 @@ const NavigationBar = () => {
             <ul className='flex'>
               {placeholder.map((element, index) =>
                 <li 
-                  className='pl-4 pr-4 pt-2 pb-2 rounded-xl hover:bg-white/10 cursor-pointer'
+                  className='pl-4 pr-4 pt-2 pb-2 cursor-pointer underline-anim'
                   key={index}
                   onClick={element.func}
                   >

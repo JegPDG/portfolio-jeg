@@ -99,7 +99,7 @@ const EducationSection = () => {
                     <p className='text-4xl font-bold text-dark-400 '> about</p>
                   </div>
 
-                  <div className='w-full flex  p-4 mt-2 gap-4 flex-col border text-sm' >
+                  <div className='w-full flex bg-white  p-4 mt-2 gap-4 flex-col border text-sm box-shadow-anim' >
                     <p className='text-dark-400'>I graduated with a <span className='text-dark-400 font-bold'>Bachelor’s degree in Computer Science</span>  from  <span className='text-dark-400 font-bold'>Garcia College of Technology </span>and I'm a <span className='text-dark-400 font-bold'>full-stack developer </span> passionate about creating useful websites. While I’m still continuously learning and improving, I am committed to growing my skills and reaching that goal.</p>  
 
                     <p className='text-dark-400'> On the frontend, I have a solid foundation in <span className='text-dark-400 font-bold'>HTML, CSS, and JavaScript </span>, and I’ve worked with modern frameworks like <span className='text-dark-400 font-bold'>React.js and Tailwind CSS</span>. As I advanced, I also explored the <span className='text-dark-400 font-bold'>backend </span>, learning <span className='text-dark-400 font-bold'> </span> and building <span className='text-dark-400 font-bold'>RESTful APIs with Django REST Framework</span>.</p>
@@ -119,7 +119,7 @@ const EducationSection = () => {
                   <p className='text-4xl font-bold text-dark-400'>experience</p>
                 </div>
 
-                <div className='w-full flex  mt-4 gap-4 flex-col relative border '>
+                <div className='w-full flex  mt-4 gap-4 flex-col relative border bg-white box-shadow-anim '>
 
                   <div className=' p-4'> 
                     <div>
@@ -187,7 +187,7 @@ const EducationSection = () => {
                   <p className='text-4xl font-bold text-dark-400'>education</p>
                 </div>
 
-                <div className='w-full flex flex-col  relative mt-4 border'>
+                <div className='w-full flex flex-col  relative mt-4 border bg-white box-shadow-anim'>
 
                   <div className='mb-12 p-2'>
                     <div className='flex gap-4 p-4 '>

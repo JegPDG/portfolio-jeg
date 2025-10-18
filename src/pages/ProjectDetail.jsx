@@ -51,9 +51,6 @@ const ProjectDetail = () => {
         {challenge: "Configuring and integrating Google OAuth with Django for secure login and authentication."},
         {challenge: "Implementing a dynamic admin panel that allows real-time content updates without page reloads."},
         {challenge: "Ensuring responsive design consistency across multiple screen sizes and devices."},
-
-
-
       ],
       technologies: [
         {tech: "React.js", icon: techStack.react_logo},
@@ -68,7 +65,6 @@ const ProjectDetail = () => {
         {tech: "Render", icon: techStack.render_logo},
         {tech: "Vercel", icon: techStack.vercel_logo},
       ]
-  
     },
     {
       projTitle: "StudBud: AI-Powered Study Companion",
@@ -161,11 +157,11 @@ const ProjectDetail = () => {
       <div className='w-full max-w-5xl m-auto p-4 fade-in-up'>
         <a href={projectItems[id].projlink} target='_blank'>
           <div className='flex items-center gap-4 cursor-pointer'>
-            <p className='text-4xl font-bold'>{projectItems[id].projTitle}</p>
+            <p className='text-4xl font-bold hover:text-white underline-anim'>{projectItems[id].projTitle}</p>
             <ArrowUpRightIcon className='size-6'></ArrowUpRightIcon>
           </div>
         </a>
-        <p>{projectItems[id].projDescription}</p>
+        <p className='mt-4'>{projectItems[id].projDescription}</p>
 
         {/* the video and image section  */}
         <div className='w-full'>
@@ -196,8 +192,8 @@ const ProjectDetail = () => {
                   <div 
                     onClick={() => openModal(projectItems[id].images, 1)}
                     className='w-full h-full relative cursor-pointer group overflow-hidden'>
-                    <div className="absolute inset-0 bg-dark-400/70 opacity-50 group-hover:opacity-100 transition-opacity duration-300 flex  items-center justify-center">
-                      <p className='font-bold text-3xl'>+ {projectItems[id].images.length - 2}</p>
+                    <div className="absolute inset-0 bg-white/70 opacity-50 group-hover:opacity-100 transition-opacity duration-300 flex  items-center justify-center">
+                      <p className='font-bold text-3xl text-dark-400'>+ {projectItems[id].images.length - 2}</p>
                     </div>
 
                     <img className='w-full h-full object-cover' src={projectItems[id].images[1].image} alt="" />

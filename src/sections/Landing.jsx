@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
+import { ArrowDownTrayIcon, ArrowRightIcon } from '@heroicons/react/24/solid'
 import { assets } from '../assets/assets'
 
 
@@ -19,16 +19,21 @@ const Landing = (props) => {
 
           <p className='text-5xl animate-[fadeInUp_0.6s_ease-out] '>hi!</p>
           <h1 className='text-7xl font-bold mt-2 animate-[fadeInUp_0.8s_ease-out]'>I'm Jeg Paduga</h1>
-          <p className='text-4xl mt-4 animate-[fadeInUp_1s_ease-out]'>Building robust <span className='steel-metallic font-bold'>fullstack applications.</span></p>
+          <p className='text-3xl mt-4 animate-[fadeInUp_1s_ease-out]'>Crafting modern web experiences with precision and creativity.</p>
+          {/* <span className='steel-metallic font-bold'>fullstack applications.</span> */}
+          <p className='mt-4 max-w-xl animate-[fadeInUp_1.2s_ease-out] italic'>“Passionate about clean code, responsive design, and scalable full-stack solutions.”</p>
           {/* <p className='mt-4 max-w-xl animate-[fadeInUp_1.2s_ease-out]'>I’m Jeg, a recent Computer Science graduate with a passion for full-stack web development. I build user-friendly applications using React.js, Django, and Django REST APIs.</p> */}
 
           <div className='mt-8 animate-[fadeInUp_1.4s_ease-out]'>
             <div className='flex gap-4 items-center'>
               <button 
                 onClick={scrollToProjects}
-                className='border border-white pt-2 pb-2 pl-4 pr-4 cursor-pointer hover:bg-white/10'
+                className='border border-white pt-2 pb-2 pl-4 pr-4 cursor-pointer flex items-center gap-2 hover:bg-white/10'
               
-              >See projects</button>
+              >
+                View my work 
+                <ArrowRightIcon className='size-5'></ArrowRightIcon>
+              </button>
               {/* <button className='flex gap-2'>
                 <ArrowDownTrayIcon className='size-6 text-blue-400'   style={{ color: '#3b82f6' }}  ></ArrowDownTrayIcon>
                 <p>Resume</p>

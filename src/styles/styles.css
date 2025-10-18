@@ -6,6 +6,15 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@theme {
+  --color-dark-500: #121212;
+  --color-dark-400: #1E1E1E;
+  --color-lighter-gray: #2B2B2B;
+
+  --color-white-500: #E0E0E0;
+  --color-white-grey: #EFEFEF;
+
+}
 
 @layer base {
   * {
@@ -48,7 +57,7 @@
 
   .gradient-bg{
     background: #29251e;
-    background: linear-gradient(90deg, rgba(41, 37, 30, 1) 0%, rgba(7, 7, 10, 1) 100%);
+    background: radial-gradient(circle,rgba(13, 9, 9, 1) 0%, rgba(12, 12, 18, 1) 40%, rgba(8, 8, 28, 1) 79%, rgba(41, 45, 59, 1) 98%);
   }
 
   /* Animation */
@@ -182,14 +191,79 @@
 
 }
 
-@theme {
-  --color-dark-500: #121212;
-  --color-dark-400: #1E1E1E;
-  --color-lighter-gray: #2B2B2B;
+@layer components {
 
-  --color-white-500: #E0E0E0;
-  --color-white-grey: #EFEFEF;
+  /* Gray Shadow  */
+  .box-shadow-anim {
+    position: relative;
+    display: inline-block;
+    transition: box-shadow 0.4s ease-in-out;
+  }
+
+  .box-shadow-anim::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Fills the element */
+    border-radius: inherit;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: -1; /* keeps it behind the element */
+  }
+
+  .box-shadow-anim:hover::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* White Shadow  */
+  .box-shadow-anim-2 {
+    position: relative;
+    display: inline-block;
+    transition: box-shadow 0.4s ease-in-out;
+  }
+
+  .box-shadow-anim-2::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Fills the element */
+    border-radius: inherit;
+    box-shadow: rgba(243, 243, 247, 0.25) 0px 30px 60px -12px,
+                rgba(208, 208, 208, 0.3) 0px 18px 36px -18px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: -1; /* keeps it behind the element */
+  }
+
+  .box-shadow-anim-2:hover::after {
+    opacity: 1;
+    transform: scale(1);
+  }
 
 
+  .underline-anim {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
 
+  .underline-anim::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(231, 229, 226), rgb(151, 149, 151), rgb(32, 32, 31));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .underline-anim:hover::after {
+    transform: scaleX(1);
+  }
 }

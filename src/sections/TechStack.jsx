@@ -58,10 +58,10 @@ const TechStack = () => {
         </div>
 
         <div>
-          <ul className='grid grid-cols-2 mt-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'>
+          <ul className='grid grid-cols-2 mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'>
             {techstack.map((tech, index) =>
               <li
-                className={`p-4 flex flex-col w-full h-24 items-center hover:bg-white/10 border border-white/10
+                className={`p-4 flex flex-col w-full h-24 items-center border bg-dark-500 border-white/10 box-shadow-anim-2
                   ${animatedItems.has(index) ? 'slide-in-right': 'slide-in-right-hidden'}
                   `}
                 style={{transitionDelay: isVisible ? `${index * 100}ms` : '0ms'}}
