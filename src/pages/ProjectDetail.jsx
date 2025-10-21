@@ -68,7 +68,7 @@ const ProjectDetail = () => {
     },
     {
       projTitle: "StudBud: AI-Powered Study Companion",
-      projlink: "https://bean-and-hops.vercel.app",
+      projlink: "study-tracker-rust.vercel.app",
       projDescription: "StudBud is a smart notes application designed to help students organize their study materials efficiently. It allows users to create subjects, take detailed notes, and leverage AI to summarize, quiz, and reinforce learning. The goal is to make studying more interactive, personalized, and effective.",
       video: studyTracker.studytracker_1,
       images: [
@@ -153,7 +153,7 @@ const ProjectDetail = () => {
   ]
 
   return (
-    <div className='relative'>
+    <div className='relative mt-[70px]'>
       <div className='w-full max-w-5xl m-auto p-4 fade-in-up'>
         <a href={projectItems[id].projlink} target='_blank'>
           <div className='flex items-center gap-4 cursor-pointer'>
@@ -165,7 +165,7 @@ const ProjectDetail = () => {
 
         {/* the video and image section  */}
         <div className='w-full'>
-          <div className='mt-8 w-full bg-dark-400 grid grid-cols-6 gap-2'>
+          <div className='mt-8 w-full bg-dark-400 grid grid-cols-6 gap-2 '>
 
               {/* Video container  */}
               <div 
@@ -209,7 +209,7 @@ const ProjectDetail = () => {
         {/* the bottom section  */}
         <div className='w-full'>
           <div className='mt-8 w-full grid grid-cols-6 gap-2'>
-            <div className='col-span-4  bg-dark-400 p-4'>
+            <div className='col-span-4  bg-dark-400 p-4 border border-white/20'>
               
               {/* Feature  */}
               <div className='mb-6'>
@@ -287,14 +287,14 @@ const ProjectDetail = () => {
             </div>
 
             <div className='col-span-2 '>
-              <div className='min-h-20 bg-dark-400 p-4 flex flex-col'>
+              <div className='min-h-20 bg-dark-400 p-4 flex flex-col border border-white/20'>
                 <p className='font-bold text-2xl'>Technologies used</p>
 
                   {/* Techstack for the project  */}
                   <ul className='mt-2 flex flex-wrap gap-2'>
                     {projectItems[id].technologies?.map((tech, index) =>
                       <li 
-                        className='bg-white/10 inline-flex pt-2 pb-2 pl-4 pr-4 gap-2 '
+                        className='bg-white/10 border border-white/20 inline-flex pt-2 pb-2 pl-4 pr-4 gap-2 '
                         key={index}>
                         <img className='size-6' src={tech.icon} alt="" />
                         <p>{tech.tech}</p>

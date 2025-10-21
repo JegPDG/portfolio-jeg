@@ -14,8 +14,8 @@ const Landing = (props) => {
         <div className='absolute bottom-0 right-0'>
           <img className='size-100' src={assets.memoji1} alt="" />
         </div>
-        <div style={{height: "calc(100vh - 64px)"}} 
-        className='flex flex-col justify-center'>
+        <div style={{height: "calc(100vh)"}} 
+        className='flex flex-col justify-center max-w-[720px]'>
 
           <p className='text-5xl animate-[fadeInUp_0.6s_ease-out] '>hi!</p>
           <h1 className='text-7xl font-bold mt-2 animate-[fadeInUp_0.8s_ease-out]'>I'm Jeg Paduga</h1>

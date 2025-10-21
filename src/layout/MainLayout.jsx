@@ -22,12 +22,12 @@ const MainLayout = () => {
     <ModalContext.Provider value={{ openModal, closeModal }}>
       <div className='relative'>
         {/* Navigation bar */}
-        <div className='fixed top-0 left-0 w-full z-50'>
+        <div className='fixed top-4 left-0 w-full z-50'>
           <NavigationBar></NavigationBar>
         </div>
 
         {/* Main contents */}
-        <div className='pt-16'>
+        <div className=''>
           <Outlet></Outlet>
         </div>
 

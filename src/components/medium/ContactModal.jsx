@@ -22,6 +22,7 @@ const ContactModal = ({isOpenContact, onClose}) => {
       .then(
         (result) => {
           console.log('SUCCESS', result)
+          alert("Email Sent! Thank you for your time!")
         },
         (error) => {
           console.log('FAILED', error.text)
