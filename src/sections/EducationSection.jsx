@@ -59,7 +59,7 @@ const EducationSection = () => {
     <>
       <div 
         id='about'
-        className='min-h-screen pb-8 '>
+        className='min-h-screen pb-8 overflow-hidden '>
         <div className='w-full max-w-5xl m-auto pl-4 pr-4 relative'>
           <div className='md:grid md:grid-cols-3 gap-6 '>
             {/* Left side  */}

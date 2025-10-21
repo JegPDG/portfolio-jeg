@@ -85,8 +85,8 @@ const Home = () => {
       <EducationSection></EducationSection>
 
       {/* Another Element */}
-      <div className='h-screen'>
-        <div className='w-full max-w-5xl m-auto pl-4 pr-4 pt-16'>
+      <div className='min-h-screen'>
+        <div className='w-full max-w-5xl m-auto px-4  pt-16 overflow-hidden'>
 
           {/* Tech stack  */}
           <TechStack></TechStack>

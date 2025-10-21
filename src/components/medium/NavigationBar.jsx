@@ -29,13 +29,13 @@ const NavigationBar = () => {
 
   return (
     <div className='w-full max-w-[800px] m-auto '>
-      <div className='w-full h-16 border-white/20 border rounded-4xl bg-dark-500/60 box-shadow-anim'>
-        <div className='w-full max-w-5xl h-full m-auto  pr-4 pl-4 box-border pt-2 pb-2 flex items-center justify-between'>
+      <div className='w-full h-12 md:h-16 border-white/20 border rounded-4xl bg-dark-500/60 box-shadow-anim'>
+        <div className='w-full max-w-5xl h-full m-auto pr-4 pl-4 box-border pt-2 pb-2 flex items-center justify-between'>
           {/* Right side logo and name */}
           <div 
             onClick={() => navigate('/', {state: {scrollTo: 'home'}} )}
             className='flex gap-4 items-center cursor-pointer'>
-            <img className='size-12' src={assets.goi_logo} alt="" />
+            <img className='size-8 md:size-12' src={assets.goi_logo} alt="" />
             <p className='text-xl font-medium'>JEG</p>
           </div>
 
@@ -49,7 +49,7 @@ const NavigationBar = () => {
             </div>
 
             {openBar &&
-              <div className='bg-dark-400/70 border border-white/20 absolute right-2 top-14 p-4 rounded-md'>
+              <div className='bg-dark-400/70 border border-white/20 absolute right-2 top-12 p-4 rounded-md'>
                 <ul className='  flex flex-col '>
                   {placeholder.map((element, index) =>
                     <li 

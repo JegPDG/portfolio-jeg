@@ -19,7 +19,7 @@ const Landing = () => {
     <div 
       id='home'
       className='gradient-bg'>
-      <div className='w-full max-w-5xl m-auto pl-4 pr-4 relative'>
+      <div className='w-full max-w-5xl m-auto pl-4 pr-4 relative overflow-hidden'>
         <div className='absolute bottom-0 right-0'>
           <img className='size-50 md:size-100' src={assets.memoji1} alt="" />
         </div>
