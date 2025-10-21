@@ -11,7 +11,7 @@ const Home = () => {
   const location = useLocation()
 
   useEffect(() =>{
-    const locationSec = location.state.scrollTo
+    const locationSec = location.state?.scrollTo
     if(locationSec == null){
       return
     }
