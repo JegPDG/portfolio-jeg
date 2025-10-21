@@ -10,22 +10,19 @@ import { useLocation } from 'react-router-dom'
 const Home = () => {
   const location = useLocation()
 
-  const scrollToProjects = () => {
-  const element = document.getElementById('projects-section');
-  element?.scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start'
-  });
-  };
-  
-  useEffect(() => {
-    if (location.state?.scrollTo === 'projects') {
-      const element = document.getElementById('projects-section');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  useEffect(() =>{
+    const locationSec = location.state.scrollTo
+    if(locationSec == null){
+      return
     }
-  }, [location]);
+
+    const element = document.getElementById(locationSec)
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+      }
+    )
+  }, [location])
 
 
   const techstack = [
@@ -82,7 +79,7 @@ const Home = () => {
     <div className='w-full '>
 
       {/* Home landing page  */}
-      <Landing scrollToProjects={scrollToProjects}></Landing>
+      <Landing ></Landing>
 
       {/* Other eleemnst */}
       <EducationSection></EducationSection>

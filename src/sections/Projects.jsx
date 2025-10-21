@@ -84,7 +84,7 @@ const Projects = () => {
         </div>
         
         {/* project container  */}
-        <ul className='mt-8 grid grid-cols-2 gap-4'>
+        <ul className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 space-y-2'>
             {projects.map((project, index) =>
               <li 
                 className={`flex flex-col w-full m-auto gap-4 bg-white p-2 hover:bg-white-grey box-shadow-anim-2

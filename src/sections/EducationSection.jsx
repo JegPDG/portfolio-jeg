@@ -57,14 +57,16 @@ const EducationSection = () => {
   // End of Scroll Animation logic
   return (
     <>
-      <div className='min-h-screen pb-8 '>
+      <div 
+        id='about'
+        className='min-h-screen pb-8 '>
         <div className='w-full max-w-5xl m-auto pl-4 pr-4 relative'>
-          <div className='grid grid-cols-3 gap-6 '>
+          <div className='md:grid md:grid-cols-3 gap-6 '>
             {/* Left side  */}
             <div
               ref={setRef('right')}
               className={`${visibleItems.right ? 'slide-in-left': 'slide-in-left-hidden'} col-span-1 `}>
-              <div className='pt-16 w-full flex flex-col items-center slide-in-left '>
+              <div className='pt-16 w-full flex gap-4 md:flex-col md:items-center slide-in-left '>
 
                 {/* Profile picture  */}
                 <div className='w-full   bg-dark-400 border'>
@@ -72,11 +74,13 @@ const EducationSection = () => {
                 </div>
 
                 <div className='flex flex-col w-full max-w-[350px] m-auto mt-2'>
-                  <p className='  font-bold text-2xl'>Jeg A. Paduga</p>
+                  <p className='  font-bold text-lg md:text-2xl'>Jeg A. Paduga</p>
                   <div className='inline-flex items-center'>
-                    <MapPinIcon className='size-6 ' fill='#4B4B4B'></MapPinIcon>
-                    <p className=''>Lezo, Aklan</p>
+                    <MapPinIcon className='size-4 md:size-6  ' fill='#4B4B4B'></MapPinIcon>
+                    <p className='text-sm'>Lezo, Aklan</p>
                   </div>
+
+                  <div>Hobies</div>
 
                 </div>
 
@@ -86,7 +90,7 @@ const EducationSection = () => {
             </div>
 
             {/* Right side */}
-            <div className='pt-16 col-span-2'>
+            <div className='pt-4 md:pt-16 col-span-2'>
 
               {/* Education section */}
               {/* About section  */}
@@ -132,7 +136,7 @@ const EducationSection = () => {
                         </div>
                       </div>
 
-                      <ul className='list-disc pl-4 pr-4'>
+                      <ul className='list-disc pl-4 pr-4 mt-2 space-y-2'>
                         <li className=' text-sm'> Designed and developed a Django-based backend system to practice database modeling and REST API creation. </li>
                         <li className=' text-sm'> Assisted in server setup and configuration, including Ubuntu installation, Docker environment setup, and Git version control. </li>
                         <li className=' text-sm'> Supported day-to-day IT operations by diagnosing and resolving software and hardware issues on office computers. </li>
@@ -184,7 +188,7 @@ const EducationSection = () => {
                 className={`${visibleItems.education ? 'slide-in-right': 'slide-in-right-hidden'} mt-8 `}>
                 <div className='flex gap-2 items-center' >
                   {/* <AcademicCapIcon className='size-12' fill='#4B4B4B'></AcademicCapIcon> */}
-                  <p className='text-4xl font-bold'>education</p>
+                  <p className=' text-4xl font-bold'>education</p>
                 </div>
 
                 <div className='w-full flex flex-col  relative mt-4 border bg-dark-500  box-shadow-anim-2 border-white/40'>
@@ -192,10 +196,10 @@ const EducationSection = () => {
                   <div className='mb-12 p-2'>
                     <div className='flex gap-4 p-4 '>
                       <img className='size-12 rounded-[50%]' src={assets.gct_logo} alt="" />
-                      <div>
-                        <p className=' font-bold text-lg'>Garcia College of Technology</p>
-                        <p className=''>Bachelor of Science in Computer Science</p>
-                        <p className=' text-sm italic'>Graduated: July 2025</p>
+                      <div className='space-y-1'>
+                        <p className='font-bold text-md md:text-lg'>Garcia College of Technology</p>
+                        <p className='text-[12px] md:text-lg'>Bachelor of Science in Computer Science</p>
+                        <p className='text-[12px] md:text-sm italic'>Graduated: July 2025</p>
                       </div>
                     </div>
 
@@ -210,9 +214,9 @@ const EducationSection = () => {
 
                         <div className='JUST A GLOB'>
                           <div className='flex flex-col items-center'>
-                            <div className='rounded-[100%] size-3 bg-dark-400/20'></div>
-                            <div className='h-8 w-1 bg-dark-400/20'></div>
-                            <div className='rounded-[100%] size-3 bg-dark-400/20'></div>
+                            <div className='rounded-[100%] size-3 bg-white'></div>
+                            <div className='h-8 w-1 bg-white/20'></div>
+                            <div className='rounded-[100%] size-3 bg-white'></div>
                           </div>
                         </div>
                         
@@ -225,25 +229,25 @@ const EducationSection = () => {
                           }}
                           >
                           <img className='size-12 rounded-[50%]' src={assets.rshs_logo} alt="" />
-                          <div>
-                            <p className=' font-bold text-lg'>Regional Science High School for Region VI</p>
+                          <div className='space-y-1'>
+                            <p className=' font-bold text-md  md:text-lg'>Regional Science High School for Region VI</p>
                             <div className='flex justify-between'>
-                              <p className=''>Junior High School</p>
-                              <p className=''>2015-2019</p>
+                              <p className='text-[12px] md:text-lg'>Junior High School</p>
+                              <p className='text-[12px] md:text-lg'>2015-2019</p>
                             </div>
                             <div className='flex justify-between'>
-                              <p className=''>Senior High School</p>
-                              <p className=''>2019-2020</p>
+                              <p className='text-[12px] md:text-lg'>Senior High School</p>
+                              <p className='text-[12px] md:text-lg'>2019-2020</p>
                             </div>
-                              <p className=' text-sm'>Science Technology Engineering and Math (STEM)</p>
+                              <p className='text-[12px] italic md:text-sm'>Science Technology Engineering and Math (STEM)</p>
                           </div>
                         </div>
 
                         <div className='JUST A GLOB'>
                           <div className='flex flex-col items-center'>
-                            <div className='rounded-[100%] size-3 bg-dark-400/20'></div>
-                            <div className='h-8 w-1 bg-dark-400/20'></div>
-                            <div className='rounded-[100%] size-3 bg-dark-400/20'></div>
+                            <div className='rounded-[100%] size-3 bg-white'></div>
+                            <div className='h-8 w-1 bg-white/20'></div>
+                            <div className='rounded-[100%] size-3 bg-white'></div>
                           </div>
                         </div>
 
@@ -256,8 +260,8 @@ const EducationSection = () => {
                           >
                           <img className='size-12 rounded-[50%]' src={assets.lis_logo} alt="" />
                           <div>
-                            <p className=' font-bold text-lg'>Lezo Integrated School</p>
-                            <p className=''>Elementary</p>
+                            <p className=' font-bold text-md md:text-lg'>Lezo Integrated School</p>
+                            <p className='text-[12px] md:text-lg'>Elementary</p>
                           </div>
                         </div>
 
@@ -287,7 +291,7 @@ const EducationSection = () => {
 
 
           {/* Memoji  */}
-          <div className='absolute bottom-[-32px] '>
+          <div className='absolute hidden  md:bottom-[-32px] md:block'>
             <img className='size-60' src={assets.memoji3} alt="" />
           </div>
 

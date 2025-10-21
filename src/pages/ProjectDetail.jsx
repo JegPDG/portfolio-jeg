@@ -157,29 +157,30 @@ const ProjectDetail = () => {
       <div className='w-full max-w-5xl m-auto p-4 fade-in-up'>
         <a href={projectItems[id].projlink} target='_blank'>
           <div className='flex items-center gap-4 cursor-pointer'>
-            <p className='text-4xl font-bold hover:text-white underline-anim'>{projectItems[id].projTitle}</p>
-            <ArrowUpRightIcon className='size-6'></ArrowUpRightIcon>
+            <p className='text-xl md:text-4xl font-bold hover:text-white underline-anim'>{projectItems[id].projTitle}
+              <ArrowUpRightIcon className='md:size-6 size-4 inline'></ArrowUpRightIcon>
+            </p>
           </div>
         </a>
-        <p className='mt-4'>{projectItems[id].projDescription}</p>
+        <p className='mt-4 md:text-lg text-sm'>{projectItems[id].projDescription}</p>
 
         {/* the video and image section  */}
         <div className='w-full'>
-          <div className='mt-8 w-full bg-dark-400 grid grid-cols-6 gap-2 '>
+          <div className='mt-8 w-full bg-dark-400 grid md:grid-cols-6 sm:grid-rows-2 md:grid-rows-1 gap-2 '>
 
               {/* Video container  */}
               <div 
                 // onClick={() => setSelectedImage(projectItems[id].video)}
-                className='col-span-4 aspect-video w-full bg-amber-300'>
+                className='md:col-span-4  aspect-video w-full bg-amber-300'>
                 <img className='w-full h-full object-cover' src={projectItems[id].video} alt="" />
               </div>
 
-              {/* image containers  */}
 
+              {/* image containers  */}
               <div 
                 // onClick={() => setSelectedImage(projectItems[id].images[0].image)}
-                className='col-span-2 w-full '>
-                <ul className='aspect-video flex gap-1 flex-col'>
+                className='md:col-span-2 w-full '>
+                <ul className='aspect-video flex gap-1 flex-row md:flex-col'>
 
                   {/* first image  */}
                   <div 
@@ -208,13 +209,14 @@ const ProjectDetail = () => {
 
         {/* the bottom section  */}
         <div className='w-full'>
-          <div className='mt-8 w-full grid grid-cols-6 gap-2'>
-            <div className='col-span-4  bg-dark-400 p-4 border border-white/20'>
+          <div className='mt-8 w-full grid grid-row-2 grid-cols-1 md:grid-cols-6 gap-2 '>
+
+            <div className='md:col-span-4 order-1 bg-dark-400 p-4 border border-white/20'>
               
               {/* Feature  */}
-              <div className='mb-6'>
+              <div className='mb-6  '>
                 {/* the heading  */}
-                <h1 className='text-2xl font-bold flex items-center gap-2'>
+                <h1 className='md:text-2xl text-lg font-bold flex items-center gap-2'>
                   <span>
                     <QueueListIcon className='size-6' fill='#E9C822'></QueueListIcon>
                   </span>
@@ -226,7 +228,7 @@ const ProjectDetail = () => {
                       <li 
                         className='mt-2'
                         key={index}>
-                        <p>{feat.feature}</p>
+                        <p className='text-[12px] md:text-lg'>{feat.feature}</p>
                       </li>
                     )}
                     
@@ -238,7 +240,7 @@ const ProjectDetail = () => {
               {/* Future Improvements  */}
               <div className='mb-6'>
                 {/* the heading  */}
-                <h1 className='text-2xl font-bold flex items-center gap-2'>
+                <h1 className='md:text-2xl text-lg font-bold flex items-center gap-2'>
                   <span>
                     <ArrowTrendingUpIcon className='size-6' fill='#223CE9'></ArrowTrendingUpIcon>
                   </span>
@@ -250,7 +252,7 @@ const ProjectDetail = () => {
                       <li 
                         className='mt-2'
                         key={index}>
-                        <p>{improvement.improve}</p>
+                        <p className='text-[12px] md:text-lg'>{improvement.improve}</p>
                       </li>
                     )}
                     
@@ -262,7 +264,7 @@ const ProjectDetail = () => {
               {/* Challenges and Learnings  */}
               <div className='mb-6'>
                 {/* the heading  */}
-                <h1 className='text-2xl font-bold flex items-center gap-2'>
+                <h1 className='md:text-2xl text-lg font-bold flex items-center gap-2'>
                   <span>
                     <FlagIcon className='size-6' fill='#2FE922'></FlagIcon>
                   </span>
@@ -274,7 +276,7 @@ const ProjectDetail = () => {
                       <li 
                         className='mt-2'
                         key={index}>
-                        <p>{challenge.challenge}</p>
+                        <p className='text-[12px] md:text-lg'>{challenge.challenge}</p>
                       </li>
                     )}
                     
@@ -283,12 +285,11 @@ const ProjectDetail = () => {
                 </div>
               </div>
 
-
             </div>
 
-            <div className='col-span-2 '>
-              <div className='min-h-20 bg-dark-400 p-4 flex flex-col border border-white/20'>
-                <p className='font-bold text-2xl'>Technologies used</p>
+            <div className='md:col-span-2 '>
+              <div className='min-h-20 bg-dark-400 p-4 flex flex-col border  border-white/20'>
+                <p className='font-bold md:text-2xl text-lg'>Technologies used</p>
 
                   {/* Techstack for the project  */}
                   <ul className='mt-2 flex flex-wrap gap-2'>
@@ -296,8 +297,8 @@ const ProjectDetail = () => {
                       <li 
                         className='bg-white/10 border border-white/20 inline-flex pt-2 pb-2 pl-4 pr-4 gap-2 '
                         key={index}>
-                        <img className='size-6' src={tech.icon} alt="" />
-                        <p>{tech.tech}</p>
+                        <img className='md:size-6 size-4' src={tech.icon} alt="" />
+                        <p className='text-[12px] md:text-lg'>{tech.tech}</p>
                         
                       </li>
                     )}

@@ -14,7 +14,7 @@ import jeg_pfp1 from './jeg-pic1x1.png'
 import memoji1 from './memoji/memoji1.png'
 import memoji2 from './memoji/memoji2.png'
 import memoji3 from './memoji/memoji3.png'
-
+import linkedin from './linkedin.png'
 
 
 
@@ -52,7 +52,9 @@ export const assets = {
   instagram_black,
   memoji1,
   memoji2,
-  memoji3
+  memoji3,
+  linkedin
+
 
 }
 
