@@ -67,7 +67,7 @@ const ProjectDetail = () => {
       ]
     },
     {
-      projTitle: "StudBud: AI-Powered Study Companion",
+      projTitle: "StudBud: AI-Assited Notes Organizer",
       projlink: "study-tracker-rust.vercel.app",
       projDescription: "StudBud is a smart notes application designed to help students organize their study materials efficiently. It allows users to create subjects, take detailed notes, and leverage AI to summarize, quiz, and reinforce learning. The goal is to make studying more interactive, personalized, and effective.",
       video: studyTracker.studytracker_1,
