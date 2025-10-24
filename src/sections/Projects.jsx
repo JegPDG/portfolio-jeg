@@ -25,7 +25,7 @@ const Projects = () => {
         {photo: studyTracker.studytracker_3},
 
       ],
-      title: "StudBud: AI-Powered Study Companion",
+      title: "StudBud: AI-Assited Notes Organizer",
       techstacks: "React.js, Django, Django REST Framework, Tailwind CSS",
       description: "A fullstack desktop web application that lets the user create subjects and notes for note taking."
     },
